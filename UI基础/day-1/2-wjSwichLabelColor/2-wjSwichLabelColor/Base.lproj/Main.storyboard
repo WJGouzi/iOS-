@@ -45,8 +45,18 @@
                                     <action selector="blueBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YR-cF-Yix"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IQ-iV-3JN">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="综合色"/>
+                                <connections>
+                                    <action selector="blueBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujg-zH-LWw"/>
+                                    <action selector="greenBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SyS-99-Ap0"/>
+                                    <action selector="redBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSR-oM-2Nd"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我是一段文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHP-yz-mdo">
-                                <rect key="frame" x="135" y="161" width="104" height="21"/>
+                                <rect key="frame" x="98" y="166" width="179" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -57,11 +67,12 @@
                     </view>
                     <connections>
                         <outlet property="colorlabel" destination="EHP-yz-mdo" id="Gaf-QF-8KQ"/>
+                        <outlet property="redBtn" destination="iYg-se-kyb" id="vHi-0T-dJa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="139"/>
+            <point key="canvasLocation" x="280.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
