@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7HU-Ws-CoU" userLabel="背景">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parsing_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="LMf-Ex-66y" userLabel="文字">
+                                <rect key="frame" x="0.0" y="340" width="375" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Qi4-sD-qsH"/>
+                                    <constraint firstAttribute="width" constant="375" id="VKM-VJ-OXO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mQv-qU-8Cz">
+                                <rect key="frame" x="0.0" y="57" width="375" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0V-Dp-O7C">
+                                <rect key="frame" x="-8" y="528" width="118" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="player_btn_pre_normal.png"/>
+                                <connections>
+                                    <action selector="changeMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCG-qh-wsu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRT-rY-Qnm">
+                                <rect key="frame" x="107" y="528" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="player_btn_play_normal.png"/>
+                                <state key="selected" image="player_btn_pause_normal.png"/>
+                                <connections>
+                                    <action selector="playOrPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdR-fm-lM7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5i-Pq-QYL">
+                                <rect key="frame" x="292" y="528" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="player_btn_next_normal.png"/>
+                                <connections>
+                                    <action selector="changeMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aG0-bV-YPg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-S8-5Ks">
+                                <rect key="frame" x="198" y="528" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="player_btn_pause_normal.png"/>
+                                <connections>
+                                    <action selector="playOrPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dsu-f2-pXx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7HU-Ws-CoU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2iA-7j-9Vx"/>
+                            <constraint firstItem="7HU-Ws-CoU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EJC-vC-9ea"/>
+                            <constraint firstItem="LMf-Ex-66y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="320" id="ILF-Gs-bMa"/>
+                            <constraint firstItem="LMf-Ex-66y" firstAttribute="leading" secondItem="7HU-Ws-CoU" secondAttribute="leading" id="WjK-gI-RpN"/>
+                            <constraint firstAttribute="trailing" secondItem="7HU-Ws-CoU" secondAttribute="trailing" id="lsz-SJ-J3R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7HU-Ws-CoU" secondAttribute="bottom" id="wk1-OS-WQ6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="7HU-Ws-CoU" id="cDh-te-AqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg.jpg" width="685" height="836"/>
+        <image name="logo.png" width="750" height="670"/>
+        <image name="parsing_01.png" width="510" height="160"/>
+        <image name="player_btn_next_normal.png" width="64" height="64"/>
+        <image name="player_btn_pause_normal.png" width="64" height="64"/>
+        <image name="player_btn_play_normal.png" width="64" height="64"/>
+        <image name="player_btn_pre_normal.png" width="64" height="64"/>
+    </resources>
+</document>
