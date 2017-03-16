@@ -59,7 +59,7 @@
 
 
 - (void)setShopName:(NSString *)name {
-    self.nameLabel = name;
+    self.nameLabel.text = name;
 }
 
 - (void)setShopIcon:(NSString *)icon {
