@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
                              @{@"name":@"双肩包", @"icon":@"shuangjianbao"},
                              @{@"name":@"斜挎包", @"icon":@"xiekuabao"}
                              ];
-        BOOL flag = [dataArr writeToFile:@"/Users/wangjun/Desktop/data.plist" atomically:YES];
+        BOOL flag = [dataArr writeToFile:@"/Users/wangjun/Desktop/shopData.plist" atomically:YES];
         if (flag) {
             NSLog(@"写入成功!");
         }

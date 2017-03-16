@@ -34,6 +34,7 @@
 
 
 #pragma mark - 懒加载
+/*
 - (NSArray *)dataArray {
     if (!_dataArray) {
         _dataArray = @[
@@ -49,6 +50,16 @@
     }
     return _dataArray;
 }
+*/
+-(NSArray *)dataArray {
+    if (!_dataArray) {
+        // 加载数据
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"shopData" ofType:@"plist"];
+        _dataArray = [NSArray arrayWithContentsOfFile:dataPath];
+    }
+    return _dataArray;
+}
+
 
 /* 添加到购物车*/
 - (IBAction)addShopping:(UIButton *)btn {

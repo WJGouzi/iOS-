@@ -13,6 +13,7 @@
 		9B4B1FB11E792E3C0019B3A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B1FAF1E792E3C0019B3A0 /* Main.storyboard */; };
 		9B4B1FB31E792E3C0019B3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B1FB21E792E3C0019B3A0 /* Assets.xcassets */; };
 		9B4B1FB61E792E3C0019B3A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B1FB41E792E3C0019B3A0 /* LaunchScreen.storyboard */; };
+		9BA103911E7A69680007DDEE /* shopData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BA103901E7A69680007DDEE /* shopData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B4B1FB21E792E3C0019B3A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4B1FB51E792E3C0019B3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4B1FB71E792E3C0019B3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA103901E7A69680007DDEE /* shopData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shopData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		9B4B1FA61E792E3C0019B3A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9BA103901E7A69680007DDEE /* shopData.plist */,
 				9B4B1FA71E792E3C0019B3A0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA103911E7A69680007DDEE /* shopData.plist in Resources */,
 				9B4B1FB61E792E3C0019B3A0 /* LaunchScreen.storyboard in Resources */,
 				9B4B1FB31E792E3C0019B3A0 /* Assets.xcassets in Resources */,
 				9B4B1FB11E792E3C0019B3A0 /* Main.storyboard in Resources */,
@@ -309,6 +313,7 @@
 				9B4B1FBC1E792E3C0019B3A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
