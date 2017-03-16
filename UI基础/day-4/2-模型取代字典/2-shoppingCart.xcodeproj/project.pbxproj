@@ -14,7 +14,7 @@
 		9B4B1FB31E792E3C0019B3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B1FB21E792E3C0019B3A0 /* Assets.xcassets */; };
 		9B4B1FB61E792E3C0019B3A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B1FB41E792E3C0019B3A0 /* LaunchScreen.storyboard */; };
 		9BA103911E7A69680007DDEE /* shopData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BA103901E7A69680007DDEE /* shopData.plist */; };
-		9BA103941E7A6E160007DDEE /* shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA103931E7A6E160007DDEE /* shop.m */; };
+		9BA103941E7A6E160007DDEE /* wjShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA103931E7A6E160007DDEE /* wjShopModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,8 @@
 		9B4B1FB51E792E3C0019B3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4B1FB71E792E3C0019B3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA103901E7A69680007DDEE /* shopData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shopData.plist; sourceTree = "<group>"; };
-		9BA103921E7A6E160007DDEE /* shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shop.h; sourceTree = "<group>"; };
-		9BA103931E7A6E160007DDEE /* shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shop.m; sourceTree = "<group>"; };
+		9BA103921E7A6E160007DDEE /* wjShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjShopModel.h; sourceTree = "<group>"; };
+		9BA103931E7A6E160007DDEE /* wjShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjShopModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +67,8 @@
 				9B4B1FAA1E792E3C0019B3A0 /* AppDelegate.m */,
 				9B4B1FAC1E792E3C0019B3A0 /* ViewController.h */,
 				9B4B1FAD1E792E3C0019B3A0 /* ViewController.m */,
-				9BA103921E7A6E160007DDEE /* shop.h */,
-				9BA103931E7A6E160007DDEE /* shop.m */,
+				9BA103921E7A6E160007DDEE /* wjShopModel.h */,
+				9BA103931E7A6E160007DDEE /* wjShopModel.m */,
 				9B4B1FAF1E792E3C0019B3A0 /* Main.storyboard */,
 				9B4B1FB21E792E3C0019B3A0 /* Assets.xcassets */,
 				9B4B1FB41E792E3C0019B3A0 /* LaunchScreen.storyboard */,
@@ -113,6 +113,7 @@
 		9B4B1F9B1E792E3C0019B3A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = wj;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = wangjun;
 				TargetAttributes = {
@@ -162,7 +163,7 @@
 				9B4B1FAE1E792E3C0019B3A0 /* ViewController.m in Sources */,
 				9B4B1FAB1E792E3C0019B3A0 /* AppDelegate.m in Sources */,
 				9B4B1FA81E792E3C0019B3A0 /* main.m in Sources */,
-				9BA103941E7A6E160007DDEE /* shop.m in Sources */,
+				9BA103941E7A6E160007DDEE /* wjShopModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //  plist
 
 #import "ViewController.h"
-#import "shop.h"
+#import "wjShopModel.h"
 
 @interface ViewController ()
 /* 购物车*/
@@ -44,9 +44,13 @@
         // 字典转模型
         NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:0];
         for (NSDictionary *dict in _dataArray) {
-            shop *shopModel = [[shop alloc] init];
-            shopModel.icon = dict[@"icon"];
-            shopModel.name = dict[@"name"];
+            /*
+//            wjShopModel *shopModel = [wjShopModel shopWithIcon:dict[@"icon"] name:dict[@"name"]];
+//            wjShopModel *shopModel = [[wjShopModel alloc] initWithIcon:dict[@"icon"] name:dict[@"name"]];
+//            shopModel.icon = dict[@"icon"];
+//            shopModel.name = dict[@"name"];
+           */
+             wjShopModel *shopModel = [wjShopModel shopWithShopDict:dict];
             [tempArray addObject:shopModel];
         }
         _dataArray = tempArray;
@@ -86,7 +90,7 @@
     [shopView addSubview:nameLabel];
     
     // 设置数据
-    shop *shopModel = self.dataArray[index];
+    wjShopModel *shopModel = self.dataArray[index];
     imageView.image = [UIImage imageNamed:shopModel.icon];
     nameLabel.text = shopModel.name;
     
