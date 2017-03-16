@@ -20,6 +20,9 @@
 /* 删除按钮*/
 @property (weak, nonatomic) IBOutlet UIButton *removeBtn;
 
+/** 数据源数组 */
+@property (nonatomic, strong) NSArray *dataArray;
+
 @end
 
 @implementation ViewController
@@ -27,7 +30,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
+    // 这样做不妥，每次进入都需要加载。
+    /*
+    NSArray<NSDictionary *> *dataArray = @[
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单条包", @"icon":@"liantiaobao"},
+                                           @{@"name":@"单钱包", @"icon":@"qianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"}
+                                           ];
+    self.dataArray = dataArray;
+    */
+}
+
+
+#pragma mark - 懒加载
+- (NSArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = @[
+                       @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                       @{@"name":@"单条包", @"icon":@"liantiaobao"},
+                       @{@"name":@"单钱包", @"icon":@"qianbao"},
+                       @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                       @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                       @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                       @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                       @{@"name":@"单肩包", @"icon":@"danjianbao"}
+                       ];
+    }
+    return _dataArray;
 }
 
 /* 添加到购物车*/
@@ -82,6 +116,7 @@
     nameLabel.text = titleNames[index];
     */
     // 方式四(数组 + 字典)
+    /*
     NSArray<NSDictionary *> *dataArray = @[
                                            @{@"name":@"单肩包", @"icon":@"danjianbao"},
                                            @{@"name":@"单条包", @"icon":@"liantiaobao"},
@@ -92,7 +127,9 @@
                                            @{@"name":@"单肩包", @"icon":@"danjianbao"},
                                            @{@"name":@"单肩包", @"icon":@"danjianbao"}
                                            ];
-    NSDictionary *dict = dataArray[index];
+    */
+    
+    NSDictionary *dict = self.dataArray[index];
     imageView.image = [UIImage imageNamed:dict[@"icon"]];
     nameLabel.text = dict[@"name"];
     
