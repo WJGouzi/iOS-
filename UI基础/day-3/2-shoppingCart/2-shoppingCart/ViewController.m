@@ -12,7 +12,7 @@
 /* 购物车*/
 @property (weak, nonatomic) IBOutlet UIView *shopCarView;
 
-/* 全局下标*/
+/* 全局下标*/ // 不可取
 //@property (nonatomic, assign) NSInteger index;
 
 /* 添加按钮*/
@@ -26,8 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.index = 0;
 
+    
 }
 
 /* 添加到购物车*/
@@ -47,13 +47,56 @@
     
     
     
-    // 创建商品view
+    // 创建商品view视图
     UIView *shopView = [[UIView alloc] initWithFrame:CGRectMake(x, y, width, height)];
     shopView.backgroundColor = [UIColor orangeColor];
     [self.shopCarView addSubview:shopView];
-    self.removeBtn.enabled = YES;
-//    self.index += 1;
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = CGRectMake(0, 0, width, width);
+    imageView.backgroundColor = [UIColor blueColor];
+    [shopView addSubview:imageView];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, width, width, height - width)];
+    nameLabel.textAlignment = NSTextAlignmentCenter;
+    nameLabel.backgroundColor = [UIColor yellowColor];
+    [shopView addSubview:nameLabel];
     
+    // 设置数据
+    // 方式一(不可取：数据都是一样的)
+    /*
+    imageView.image = [UIImage imageNamed:@"danjianbao"];
+    nameLabel.text = @"单肩包";
+    */
+    // 方式二(也不可取:太冗余)
+    /**
+     if () {
+     
+     } else {
+     
+     }
+     */
+    // 方式三（数组：两个数组之间容易出错，不能形成联系，可能匹配出错）
+    /*
+    NSArray<NSString *> *imageNames = @[@"danjianbao", @"liantiaobao", @"qianbao", @"shoutibao", @"shuangjianbao", @"xiekuabao", @"shuangjianbao", @"xiekuabao"];
+    NSArray<NSString *> *titleNames = @[@"单肩包", @"链条包", @"钱包", @"手提包", @"双肩包", @"斜跨包", @"双肩包", @"斜跨包"];
+    imageView.image = [UIImage imageNamed:imageNames[index]];
+    nameLabel.text = titleNames[index];
+    */
+    // 方式四(数组 + 字典)
+    NSArray<NSDictionary *> *dataArray = @[
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单条包", @"icon":@"liantiaobao"},
+                                           @{@"name":@"单钱包", @"icon":@"qianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"},
+                                           @{@"name":@"单肩包", @"icon":@"danjianbao"}
+                                           ];
+    NSDictionary *dict = dataArray[index];
+    imageView.image = [UIImage imageNamed:dict[@"icon"]];
+    nameLabel.text = dict[@"name"];
+    
+    self.removeBtn.enabled = YES;
     if (index == 7) {
         btn.enabled = NO;
     }
@@ -63,7 +106,6 @@
 - (IBAction)removeShopping:(UIButton *)btn {
     // 删除最后一个商品
     [self.shopCarView.subviews.lastObject removeFromSuperview];
-//    self.index -= 1;
     if (self.shopCarView.subviews.count == 0) {
         btn.enabled = NO;
     }
