@@ -28,6 +28,15 @@
     return self;
 }
 
+// 如果重写了此方法，就可以不用写 - init 的方法，因为init方法和initWithFrame:方法都会调用initWithFrame:方法
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self settings];
+    }
+    return self;
+}
+
+
 /**
  *  构造方法
  */
