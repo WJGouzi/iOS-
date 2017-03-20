@@ -90,6 +90,7 @@
  *  添加xib中创建的子控件 的子控件
  */
 - (void)awakeFromNib {
+    [super awakeFromNib];
     UIToolbar *toolBar = [[UIToolbar alloc] init];
     [self.iconView addSubview:toolBar];
     self.toolBar = toolBar;
