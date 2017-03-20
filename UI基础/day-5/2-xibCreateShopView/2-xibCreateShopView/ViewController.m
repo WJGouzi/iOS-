@@ -18,10 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 加载xib
-    wjShopView *shopView = [[[NSBundle mainBundle] loadNibNamed:@"wjShopView" owner:nil options:nil] firstObject];
+//    wjShopView *shopView = [[[NSBundle mainBundle] loadNibNamed:@"wjShopView" owner:nil options:nil] firstObject];
+    wjShopView *shopView = [wjShopView shopView];
     shopView.frame = CGRectMake(100, 100, 80, 100);
     
-    [shopView setTitleNameLabel:@"单肩包"];
+    [shopView setTitleName:@"单肩包"];
     [shopView setIconImage:@"danjianbao"];
     [self.view addSubview:shopView];
 }

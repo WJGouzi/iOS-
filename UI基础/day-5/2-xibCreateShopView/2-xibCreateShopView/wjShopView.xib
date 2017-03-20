@@ -34,7 +34,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="iconView" destination="7py-sZ-oaW" id="5GE-j3-ZxP"/>
-                <outlet property="titleNameLabel" destination="Sn2-iB-k40" id="2bs-i7-vwV"/>
+                <outlet property="titleNameLabel" destination="Sn2-iB-k40" id="PqL-9k-TKn"/>
             </connections>
         </view>
     </objects>

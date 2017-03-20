@@ -14,7 +14,11 @@
 // 提供set方法
 - (void)setIconImage:(NSString *)imageName;
 
-- (void)setTitleNameLabel:(NSString *)titleName;
+- (void)setTitleName:(NSString *)titleName;
+
+
+// 快速构造方法
++ (instancetype)shopView;
 
 
 @end
