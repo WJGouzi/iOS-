@@ -42,10 +42,18 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zzj-Dh-kQA" userLabel="购物车">
-                                <rect key="frame" x="16" y="207" width="343" height="207"/>
+                                <rect key="frame" x="16" y="204" width="343" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55975765995263216" green="1" blue="0.026587482464513035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当前购物车已满了！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idb-25-eYz">
+                                <rect key="frame" x="102" y="300" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.6588235294" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -53,11 +61,12 @@
                         <outlet property="addBtn" destination="pY0-I3-eWe" id="7dM-Cn-Qby"/>
                         <outlet property="removeBtn" destination="nVd-2u-j0Y" id="NdQ-G6-BdB"/>
                         <outlet property="shopCarView" destination="Zzj-Dh-kQA" id="aL0-gl-gLs"/>
+                        <outlet property="showNoticeLabel" destination="idb-25-eYz" id="xKl-uV-rsw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="113"/>
+            <point key="canvasLocation" x="-18.399999999999999" y="112.89355322338831"/>
         </scene>
     </scenes>
     <resources>

@@ -21,6 +21,10 @@
 /** 数据源数组 */
 @property (nonatomic, strong) NSArray *dataArray;
 
+/* 提醒文字*/
+@property (weak, nonatomic) IBOutlet UILabel *showNoticeLabel;
+
+
 @end
 
 @implementation ViewController
@@ -52,6 +56,7 @@
 
 /* 添加到购物车*/
 - (IBAction)addShopping:(UIButton *)btn {
+    
     //
     NSInteger allCols = 4;
     NSInteger allRanks = 2;
@@ -66,15 +71,16 @@
     CGFloat y = (marginV + height) * (index / allCols);
     
     // 设置数据
-    wjShopView *shopView = [wjShopView shopView ];
-    shopView.shopModel = self.dataArray[index];
+    wjShopView *shopView = [wjShopView shopView];
     shopView.frame = CGRectMake(x, y, width, height);
+    shopView.shopModel = self.dataArray[index];
     [self.shopCarView addSubview:shopView];
 
     
     self.removeBtn.enabled = YES;
     if (index == 7) {
         btn.enabled = NO;
+        [self showWithInfo:@"当前购物车已满了！"];
     }
 }
 
@@ -84,10 +90,29 @@
     [self.shopCarView.subviews.lastObject removeFromSuperview];
     if (self.shopCarView.subviews.count == 0) {
         btn.enabled = NO;
+        [self showWithInfo:@"购物车已经清空了！"];
     }
     self.addBtn.enabled = YES;
     
 }
+
+
+
+- (void)showWithInfo:(NSString *)info {
+    
+    [UIView animateWithDuration:1.0f animations:^{
+        self.showNoticeLabel.text = info;
+        self.showNoticeLabel.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1.0f animations:^{
+            self.showNoticeLabel.alpha = 0.f;
+        }];
+    }];
+    
+}
+
+
+
 
 
 @end
