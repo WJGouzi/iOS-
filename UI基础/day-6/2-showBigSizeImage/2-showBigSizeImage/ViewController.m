@@ -20,22 +20,84 @@
     UIImage *image = [UIImage imageNamed:@"minion"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     [self.scrollView addSubview:imageView];
-//    CGFloat imageW = image.size.width;
-//    CGFloat imageH = image.size.height;
-    self.scrollView.contentSize = image.size;//CGSizeMake(imageW, imageH);
+    self.scrollView.contentSize = image.size;
     
     // 常见的基本属性
     self.scrollView.bounces = NO; // 回弹效果
     
 //    [self indicatorView];
     
-    // 滚动条
-    self.scrollView.showsVerticalScrollIndicator = YES;
-    self.scrollView.showsHorizontalScrollIndicator = YES;
+//    [self basicPropertySettings];
+}
+
+
+#pragma mark - 按钮的点击事件
+
+- (IBAction)top:(UIButton *)sender {
+    // 回到顶部
+    // 方式一:
+    /*
+    [UIView animateWithDuration:0.5 animations:^{
+        CGPoint offset = self.scrollView.contentOffset;
+        offset.y = 0;
+        self.scrollView.contentOffset = offset;
+    }];
+    */
+    
+    
+    // 方式二:
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, 0) animated:YES]; // 动画的时间是不能进行设置的
+    
+}
+
+- (IBAction)rightTop:(UIButton *)sender {
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentSize.width - self.scrollView.frame.size.width, 0) animated:YES];
+}
+
+- (IBAction)right:(UIButton *)sender {
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentSize.width - self.scrollView.frame.size.width, self.scrollView.contentOffset.y) animated:YES];
+}
+
+- (IBAction)bottom:(UIButton *)sender {
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, self.scrollView.contentSize.height - self.scrollView.frame.size.height) animated:YES];
+
+}
+
+- (IBAction)leftBottom:(UIButton *)sender {
+    [self.scrollView setContentOffset:CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.frame.size.height) animated:YES];
+
+}
+
+- (IBAction)left:(UIButton *)sender {
+    [self.scrollView setContentOffset:CGPointMake(0, self.scrollView.contentOffset.y) animated:YES];
+
+}
+
+/**
+ 点击控制器的view会自动调用此方法
+ */
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s", __func__);
+}
+
+
+
+// 一些基本属性的设置
+- (void)basicPropertySettings {
+    // 作用1:设置内容滚动的位置（setter方法）
+    // 作用2:得知内容滚动的位置（getter方法）
+    self.scrollView.contentOffset = CGPointMake(100, 100); // 计算方式:scrollView的origin - contentSize的origin
     
     
 }
 
+
+
+// 滚动条
+- (void)showScrollViewIndicator {
+    self.scrollView.showsVerticalScrollIndicator = YES;
+    self.scrollView.showsHorizontalScrollIndicator = YES;
+}
 
 // 设置菊花
 - (void)indicatorView {
