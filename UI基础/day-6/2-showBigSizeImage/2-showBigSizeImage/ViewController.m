@@ -28,11 +28,19 @@
 //    [self indicatorView];
     
 //    [self basicPropertySettings];
+    [self contenInsetEdgeSettings];
+    
+}
+
+
+#pragma mark - 内边距设置
+- (void)contenInsetEdgeSettings {
+    self.scrollView.contentInset = UIEdgeInsetsMake(10, 20, 30, 40);
+    
 }
 
 
 #pragma mark - 按钮的点击事件
-
 - (IBAction)top:(UIButton *)sender {
     // 回到顶部
     // 方式一:
@@ -73,13 +81,14 @@
 
 }
 
+
+
 /**
  点击控制器的view会自动调用此方法
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%s", __func__);
 }
-
 
 
 // 一些基本属性的设置
@@ -92,13 +101,16 @@
 }
 
 
-
+#pragma mark - 滚动条的设置
 // 滚动条
 - (void)showScrollViewIndicator {
     self.scrollView.showsVerticalScrollIndicator = YES;
     self.scrollView.showsHorizontalScrollIndicator = YES;
 }
 
+
+
+#pragma mark - 菊花的指示的设置
 // 设置菊花
 - (void)indicatorView {
     /*
