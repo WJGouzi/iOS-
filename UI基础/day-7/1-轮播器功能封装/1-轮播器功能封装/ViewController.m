@@ -23,7 +23,15 @@
 
 - (void)wj_ScorllViewWithPageControl {
     wjPageView *pageView = [wjPageView pageView];
-    pageView.center = self.view.center;
+//    pageView.center = self.view.center;
+    
+    /*
+     *  此处自定义scrollView的位置
+     *  pageView xib 关闭了autoLayout的选项
+     *  也能进行自适应-> autoresizing
+     */
+    pageView.frame = CGRectMake(0, 20, self.view.frame.size.width, 130);
+    
     NSMutableArray *images = [NSMutableArray arrayWithCapacity:0];
     for (int i = 1; i <= 5; ++i) {
         [images addObject:[NSString stringWithFormat:@"img_0%d", i]];

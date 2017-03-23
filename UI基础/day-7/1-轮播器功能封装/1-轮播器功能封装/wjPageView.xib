@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,29 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cW-j2-xU0">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="0cW-j2-xU0">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.81032329569999995" green="0.99607843139999996" blue="0.154843432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </scrollView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="hxS-wl-KYB">
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" id="hxS-wl-KYB">
                     <rect key="frame" x="100" y="93" width="100" height="37"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="37" id="NZn-jH-3mW"/>
-                        <constraint firstAttribute="width" constant="100" id="nap-Oe-G1j"/>
-                    </constraints>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="pageIndicatorTintColor" red="0.95135172079999997" green="0.49772013980000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.026395015559999999" blue="0.042413699870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="hxS-wl-KYB" firstAttribute="centerX" secondItem="0cW-j2-xU0" secondAttribute="centerX" id="4gg-2G-bE0"/>
-                <constraint firstItem="0cW-j2-xU0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KJK-tP-nl3"/>
-                <constraint firstAttribute="bottom" secondItem="hxS-wl-KYB" secondAttribute="bottom" id="NIv-Ge-yuH"/>
-                <constraint firstAttribute="trailing" secondItem="0cW-j2-xU0" secondAttribute="trailing" id="Olj-Dc-FzL"/>
-                <constraint firstItem="0cW-j2-xU0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="P81-H5-zMB"/>
-                <constraint firstAttribute="bottom" secondItem="0cW-j2-xU0" secondAttribute="bottom" id="UmP-hY-2iO"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -47,4 +37,9 @@
             <point key="canvasLocation" x="36" y="14"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>
