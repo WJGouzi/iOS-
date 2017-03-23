@@ -30,7 +30,7 @@
      *  pageView xib 关闭了autoLayout的选项
      *  也能进行自适应-> autoresizing
      */
-    pageView.frame = CGRectMake(0, 20, self.view.frame.size.width, 130);
+    pageView.frame = CGRectMake(0, 20, self.view.frame.size.width, 150);
     
     NSMutableArray *images = [NSMutableArray arrayWithCapacity:0];
     for (int i = 1; i <= 5; ++i) {
