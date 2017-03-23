@@ -38,7 +38,19 @@
     self.wjScrollView.delegate = self;
     self.wjScrollView.bounces = NO;
     [self startTimer];
+    [self pageViewAutoResizing];
 }
+
+#pragma mark - 利用代码进来自动布局
+/**
+ 需要关掉xib中已经设置好的autoResizing的连线
+ */
+-(void)pageViewAutoResizing {
+    self.wjScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.wjPageControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+}
+
+
 
 #pragma mark - setter方法
 - (void)setImageNames:(NSArray *)imageNames {
