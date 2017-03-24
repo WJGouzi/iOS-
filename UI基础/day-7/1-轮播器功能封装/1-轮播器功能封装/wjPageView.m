@@ -33,6 +33,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.wjPageControl.hidesForSinglePage = YES;
+    self.wjScrollView.pagingEnabled = YES;
+    self.wjScrollView.showsHorizontalScrollIndicator = NO;
     [self.wjPageControl setValue:[UIImage imageNamed:@"current"] forKeyPath:@"_currentPageImage"];
     [self.wjPageControl setValue:[UIImage imageNamed:@"other"] forKeyPath:@"_pageImage"];
     self.wjScrollView.delegate = self;
@@ -78,8 +80,6 @@
         [self.wjScrollView addSubview:imageView];
     }
     self.wjScrollView.contentSize = CGSizeMake(imageCount * scrollViewW, 0);
-    self.wjScrollView.pagingEnabled = YES;
-    self.wjScrollView.showsHorizontalScrollIndicator = NO;
     self.wjPageControl.numberOfPages = imageCount;
     
     
