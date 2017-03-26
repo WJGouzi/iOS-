@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-zk-Ghm">
+                                <rect key="frame" x="36" y="270" width="275" height="251.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-N2-2cU">
+                                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="8oE-VU-gBl"/>
+                                            <constraint firstAttribute="height" constant="80" id="CtU-M4-h9h"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPX-oP-VZW">
+                                        <rect key="frame" x="10" y="98" width="255" height="143.5"/>
+                                        <color key="backgroundColor" red="1" green="0.026395015559999999" blue="0.042413699870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">dfasfasdasdsfsdfsdbfsjdhfbhsjdbkdjkasdkjabdfhjasdansjkdanskjcbadfasfasdasdsfsdfsdbfsjdhfbhsjdbkdjkasdkjabdfhjasdansjkdanskjcbadfasfasdasdsfsdfsdbfsjdhfbhsjdbkdjkasdkjabdfhjasdansjkdanskjcbadfasfasdasdsfsdfsdbfsjdhfbhsjdbkdjkasdkjabdfhjasdansjkdanskjcba</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55975766000000005" green="1" blue="0.026587482459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FPX-oP-VZW" firstAttribute="leading" secondItem="fSe-zk-Ghm" secondAttribute="leading" constant="10" id="Mif-H5-ZgD"/>
+                                    <constraint firstAttribute="trailing" secondItem="FPX-oP-VZW" secondAttribute="trailing" constant="10" id="OIK-de-GzM"/>
+                                    <constraint firstItem="FPX-oP-VZW" firstAttribute="top" secondItem="dx4-N2-2cU" secondAttribute="bottom" constant="8" id="h7x-H8-492"/>
+                                    <constraint firstAttribute="width" constant="275" id="pOw-p9-2zb"/>
+                                    <constraint firstAttribute="bottom" secondItem="FPX-oP-VZW" secondAttribute="bottom" constant="10" id="wlW-qp-YRg"/>
+                                    <constraint firstItem="dx4-N2-2cU" firstAttribute="leading" secondItem="fSe-zk-Ghm" secondAttribute="leading" constant="10" id="zvr-Yq-o1x"/>
+                                    <constraint firstItem="dx4-N2-2cU" firstAttribute="top" secondItem="fSe-zk-Ghm" secondAttribute="top" constant="10" id="zxF-pZ-RcZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fSe-zk-Ghm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="PSZ-Ao-728"/>
+                            <constraint firstItem="fSe-zk-Ghm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="x7L-BQ-GkO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
