@@ -21,6 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
+    
+    // 一些基本属性
+//    // cell行高
+//    self.tableView.rowHeight = 50;
+//    
+//    // 每一组的头尾部的高度
+//    self.tableView.sectionHeaderHeight = 30;
+//    self.tableView.sectionFooterHeight = 30;
+//    
+//    // 整张表的头部
+//    self.tableView.tableHeaderView = [[UISwitch alloc] init];
+//    // 整张表的尾部
+//    self.tableView.tableFooterView = [[UISwitch alloc] init];
+//    
+//    // 分割线
+//    self.tableView.separatorColor = [UIColor redColor];
+//    //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched; // 仅支持在group样式下。
 }
 
 - (NSArray *)wineArray {
