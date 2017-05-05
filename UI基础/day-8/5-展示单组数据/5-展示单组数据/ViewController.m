@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "wjWineModel.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 /** 数据源数组 */
@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     // 一些基本属性
 //    // cell行高
@@ -64,9 +65,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *iden = @"iden";
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:iden];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if (!cell) {
-        cell = [tableView dequeueReusableCellWithIdentifier:iden];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:iden];
     }
     wjWineModel *model = self.wineArray[indexPath.row];
     cell.textLabel.text = model.name;
@@ -75,5 +76,68 @@
     cell.detailTextLabel.textColor = [UIColor orangeColor];
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
+/**
+ *  选中了某一行cell就会调用这个方法
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"选中了:%ld",indexPath.row);
+}
+
+/**
+ *  取消选中了某一行cell就会调用这个方法
+ */
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //     NSLog(@"取消选中了:%ld",indexPath.row);
+}
+
+/**
+ *  返回每一组显示的头部控件
+ */
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [UIButton buttonWithType:UIButtonTypeContactAdd];
+}
+
+/**
+ *  返回每一组显示的尾部控件
+ */
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//
+//}
+
+/**
+ *  返回每一组的头部高度
+ */
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 100;
+}
+
+/**
+ *  返回每一组的尾部高度
+ */
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//
+//}
+
+/**
+ *  返回每一行cell的高度
+ */
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (indexPath.row % 2 == 0) {
+//        return 100;
+//    } else {
+//        return 50;
+//    }
+//}
+
+
 
 @end
