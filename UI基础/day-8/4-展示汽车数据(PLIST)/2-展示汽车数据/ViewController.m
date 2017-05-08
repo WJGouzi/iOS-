@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "wjCarGroup.h"
 #import "wjCar.h"
+#import "MJExtension.h"
 
 @interface ViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -51,6 +52,7 @@
     }
     return _carsDataGroups;
 }
+
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
