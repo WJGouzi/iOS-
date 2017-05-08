@@ -28,6 +28,8 @@
 		9B9951A01EC0B030000169A5 /* wjShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B99519F1EC0B030000169A5 /* wjShopCell.xib */; };
 		9B9951A31EC0B163000169A5 /* wjShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9951A21EC0B163000169A5 /* wjShopCell.m */; };
 		9B9951A51EC0B315000169A5 /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B9951A41EC0B315000169A5 /* tgs.plist */; };
+		9B9951A91EC0B6B2000169A5 /* wjTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9951A71EC0B6B2000169A5 /* wjTestCell.m */; };
+		9B9951AA1EC0B6B2000169A5 /* wjTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9951A81EC0B6B2000169A5 /* wjTestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,9 @@
 		9B9951A11EC0B163000169A5 /* wjShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjShopCell.h; sourceTree = "<group>"; };
 		9B9951A21EC0B163000169A5 /* wjShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjShopCell.m; sourceTree = "<group>"; };
 		9B9951A41EC0B315000169A5 /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
+		9B9951A61EC0B6B2000169A5 /* wjTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjTestCell.h; sourceTree = "<group>"; };
+		9B9951A71EC0B6B2000169A5 /* wjTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjTestCell.m; sourceTree = "<group>"; };
+		9B9951A81EC0B6B2000169A5 /* wjTestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wjTestCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,9 @@
 				9B9951A11EC0B163000169A5 /* wjShopCell.h */,
 				9B9951A21EC0B163000169A5 /* wjShopCell.m */,
 				9B99519F1EC0B030000169A5 /* wjShopCell.xib */,
+				9B9951A61EC0B6B2000169A5 /* wjTestCell.h */,
+				9B9951A71EC0B6B2000169A5 /* wjTestCell.m */,
+				9B9951A81EC0B6B2000169A5 /* wjTestCell.xib */,
 				9B99519C1EC0AF9B000169A5 /* wjShopListModel.h */,
 				9B99519D1EC0AF9B000169A5 /* wjShopListModel.m */,
 				9B9951A41EC0B315000169A5 /* tgs.plist */,
@@ -218,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9951AA1EC0B6B2000169A5 /* wjTestCell.xib in Resources */,
 				9B9951A51EC0B315000169A5 /* tgs.plist in Resources */,
 				9B9951721EC0AEDD000169A5 /* LaunchScreen.storyboard in Resources */,
 				9B99516F1EC0AEDD000169A5 /* Assets.xcassets in Resources */,
@@ -239,6 +248,7 @@
 				9B9951921EC0AF6C000169A5 /* MJExtensionConst.m in Sources */,
 				9B9951971EC0AF6C000169A5 /* NSObject+MJClass.m in Sources */,
 				9B99519A1EC0AF6C000169A5 /* NSObject+MJProperty.m in Sources */,
+				9B9951A91EC0B6B2000169A5 /* wjTestCell.m in Sources */,
 				9B9951991EC0AF6C000169A5 /* NSObject+MJKeyValue.m in Sources */,
 				9B9951941EC0AF6C000169A5 /* MJProperty.m in Sources */,
 				9B9951671EC0AEDD000169A5 /* AppDelegate.m in Sources */,
@@ -407,7 +417,6 @@
 				9B9951781EC0AEDD000169A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

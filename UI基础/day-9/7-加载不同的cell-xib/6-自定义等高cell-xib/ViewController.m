@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "wjShopCell.h"
+#import "wjTestCell.h"
 #import "wjShopListModel.h"
 #import "MJExtension.h"
 
@@ -20,12 +21,14 @@
 @implementation ViewController
 
 static NSString *iden = @"cellForSameHeight";
+static NSString *testIden = @"testCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 70;
-//    [self.tableView registerClass:[wjShopListCell class] forCellReuseIdentifier:iden]; // 会主动加载alloc init  方法  然后去创建。。。不会去主动加载xib文件
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([wjShopCell class]) bundle:nil] forCellReuseIdentifier:iden];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([wjTestCell class]) bundle:nil] forCellReuseIdentifier:testIden];
+
 }
 
 
@@ -51,13 +54,17 @@ static NSString *iden = @"cellForSameHeight";
     return self.dataArray.count;
 }
 
+// 偶数行显示团购的数据，奇数行显示testCell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    wjShopCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
-//    if (!cell) {
-//        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([wjShopCell class]) owner:nil options:nil].lastObject;
-//    }
-    cell.model = self.dataArray[indexPath.row];
-    return cell;
+    if (indexPath.row % 2 == 0) {
+        wjShopCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
+        cell.model = self.dataArray[indexPath.row];
+        return cell;
+    } else {
+        wjTestCell *cell = [tableView dequeueReusableCellWithIdentifier:testIden];
+    
+        return cell;
+    }
 }
 
 
