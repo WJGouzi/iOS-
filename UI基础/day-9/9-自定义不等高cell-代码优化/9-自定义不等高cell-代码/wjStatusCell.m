@@ -70,46 +70,7 @@
 // 后调用
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat margin = 10;
-    CGFloat iconX = margin;
-    CGFloat iconY = margin;
-    CGFloat iconWH = 30;
-    self.iconImageView.frame = CGRectMake(iconX, iconY, iconWH, iconWH);
     
-    // 不需要换行
-    CGFloat nickNameX = CGRectGetMaxX(self.iconImageView.frame) + margin;
-    CGFloat nickNameY = iconY;
-    NSDictionary *attrDict = @{NSFontAttributeName : [UIFont systemFontOfSize:17.0f]};
-    CGSize nickNameSize = [self.model.name sizeWithAttributes:attrDict];
-    CGFloat nickNameH = nickNameSize.height;
-    CGFloat nickNameW = nickNameSize.width;
-    self.nickNameLabel.frame = CGRectMake(nickNameX, nickNameY, nickNameW, nickNameH);
-    
-    
-    if (self.model.isVip) {
-        CGFloat vipX = CGRectGetMaxX(self.nickNameLabel.frame) + margin;
-        CGFloat vipWH = 14;
-        CGFloat vipY = nickNameY + (nickNameH - vipWH) * 0.5 ;
-        self.vipImageView.frame = CGRectMake(vipX, vipY, vipWH, vipWH);
-    }
-
-    
-    // 需要换行
-    CGFloat textX = iconX;
-    CGFloat textY = CGRectGetMaxY(self.iconImageView.frame) + margin;
-    CGFloat textW = self.contentView.frame.size.width - 2 * margin;
-    CGSize size = CGSizeMake(textW, 100); // 最大的高度和宽度的限制
-//    CGFloat textH = [self.model.text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:size].height;
-    CGFloat textH = [self.model.text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.0f]} context:nil].size.height;
-    self.mainTextLabel.frame = CGRectMake(textX, textY, textW, textH);
-    
-    
-    if (self.model.picture) {
-        CGFloat pictureX = iconX;
-        CGFloat pictureWH = 100;
-        CGFloat pictureY = CGRectGetMaxY(self.mainTextLabel.frame) + margin;
-        self.pictureImageView.frame = CGRectMake(pictureX, pictureY, pictureWH, pictureWH);
-    }
 }
 
 
@@ -133,6 +94,11 @@
     } else {
         self.pictureImageView.hidden = YES;
     }
+    self.iconImageView.frame = self.model.iconFrame;
+    self.nickNameLabel.frame = self.model.nameFrame;
+    self.vipImageView.frame = self.model.vipFrame;
+    self.mainTextLabel.frame = self.model.textFrame;
+    self.pictureImageView.frame = self.model.pictureFrame;
 }
 
 
