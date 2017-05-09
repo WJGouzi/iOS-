@@ -24,11 +24,21 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcA-Na-c9a" userLabel="分割线">
+                        <rect key="frame" x="0.0" y="48.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.58823529409999997" green="0.82745098039999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="DBa-vD-8Lx"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="l3f-EN-O6t" secondAttribute="trailing" constant="10" id="MOA-NN-QKw"/>
                     <constraint firstItem="l3f-EN-O6t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gbD-Lz-duO"/>
                     <constraint firstItem="l3f-EN-O6t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="i0g-Fd-iiR"/>
+                    <constraint firstItem="NcA-Na-c9a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lG2-gw-zc0"/>
+                    <constraint firstAttribute="bottom" secondItem="NcA-Na-c9a" secondAttribute="bottom" id="pqz-A2-nIQ"/>
+                    <constraint firstAttribute="trailing" secondItem="NcA-Na-c9a" secondAttribute="trailing" id="vqz-XU-vlB"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="34" y="33"/>
