@@ -7,13 +7,17 @@
 //
 
 #import "wjShopCarCell.h"
-
+#import "wjShopCarModel.h"
 
 @interface wjShopCarCell()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *minusBtn;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
 
 
 @end
@@ -38,6 +42,14 @@
     btn.layer.borderColor = customerColor.CGColor;
     btn.layer.masksToBounds = YES;
     btn.layer.cornerRadius = CGRectGetWidth(btn.frame) * 0.5;
+}
+
+
+- (void)setModel:(wjShopCarModel *)model {
+    _model = model;
+    self.iconImageView.image = [UIImage imageNamed:model.image];
+    self.nameLabel.text = model.name;
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.money];
 }
 
 

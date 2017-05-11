@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class wjShopCarModel;
 
 @interface wjShopCarCell : UITableViewCell
+
+/** model */
+@property (nonatomic, strong) wjShopCarModel *model;
 
 @end

@@ -7,10 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "MJExtension.h"
 #import "wjShopCarCell.h"
+#import "wjShopCarModel.h"
 
 @interface ViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+/** wineArray */
+@property (nonatomic, strong) NSArray *wineArray;
 
 @end
 
@@ -21,15 +26,26 @@
     
 }
 
+- (NSArray *)wineArray {
+    if (!_wineArray) {
+        _wineArray = [wjShopCarModel mj_objectArrayWithFilename:@"wine.plist"];
+    }
+    return _wineArray;
+}
+
+
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.wineArray.count;
 }
 
 static NSString *iden = @"shopCarCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
-   
+    wjShopCarCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
+    cell.model = self.wineArray[indexPath.row];
+    
+    
     return cell;
 }
 
