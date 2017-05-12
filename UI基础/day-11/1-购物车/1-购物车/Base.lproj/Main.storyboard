@@ -46,15 +46,21 @@
                                         <color key="textColor" red="1" green="0.026395015559999999" blue="0.042413699870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOB-C7-ufX">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOB-C7-ufX">
                                         <rect key="frame" x="278" y="7" width="77" height="30"/>
                                         <state key="normal" title="清空购物车">
                                             <color key="titleColor" red="1" green="0.026395015559999999" blue="0.042413699870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearShopCar" destination="BYZ-38-t0r" eventType="touchUpInside" id="60p-8f-3jr"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJf-JB-fZV">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJf-JB-fZV">
                                         <rect key="frame" x="237" y="7" width="31" height="30"/>
                                         <state key="normal" title="购买"/>
+                                        <connections>
+                                            <action selector="buyProduct" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGL-kU-CLQ"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVJ-a0-0ez" userLabel="分割线">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -194,6 +200,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyBtn" destination="AJf-JB-fZV" id="8Sm-q4-JLb"/>
+                        <outlet property="clearBtn" destination="FOB-C7-ufX" id="6Zl-DJ-oUE"/>
                         <outlet property="tableView" destination="b6r-S4-xrI" id="FEW-ag-sLC"/>
                         <outlet property="totalPriceLabel" destination="MLW-9C-Oap" id="0QB-VM-0Um"/>
                     </connections>
