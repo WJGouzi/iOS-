@@ -69,6 +69,8 @@
     self.minusBtn.enabled = YES;
     
     // 发布通知
+//    NSDictionary *dict = @{@"model" : self.model};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"plusClickNotification" object:self userInfo:nil];
     
 }
 
@@ -78,11 +80,11 @@
 
     if (self.model.count == 0) {
         self.minusBtn.enabled = NO;
-        return;
     }
     
     // 发布通知
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"minusClickNotification" object:self userInfo:nil];
+
     
 }
 

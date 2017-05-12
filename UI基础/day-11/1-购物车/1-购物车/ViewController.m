@@ -28,8 +28,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 监听通知 --> 要在发布通知之前就要设置好监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(plusClick:) name:@"plusClickNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(minusClick:) name:@"minusClickNotification" object:nil];
+    
+    
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+#pragma mark - 监听通知
+- (void)plusClick:(NSNotification *)notification {
+    NSLog(@"click plus");
+    wjShopCarCell *cell = notification.object;
+    
+    int totalPrice = [self.totalPriceLabel.text intValue] + cell.model.money.intValue;
+    
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"%d", totalPrice];
+    
+}
+
+- (void)minusClick:(NSNotification *)notification {
+    NSLog(@"click minus");
+    wjShopCarCell *cell = notification.object;
+    
+    int totalPrice = [self.totalPriceLabel.text intValue] - cell.model.money.intValue;
+    
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"%d", totalPrice];
+    
+}
+
+
+
+
+#pragma mark - 获取数据源
 - (NSArray *)wineArray {
     if (!_wineArray) {
         _wineArray = [wjShopCarModel mj_objectArrayWithFilename:@"wine.plist"];
