@@ -20,4 +20,8 @@
 @property (nonatomic, copy) NSString *name;
 
 
+/* count*/
+@property (nonatomic, assign) int count;
+
+
 @end

@@ -122,6 +122,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="plusShopAction" destination="8Ed-kd-dhJ" eventType="touchUpInside" id="neo-7Q-PNw"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cM-FG-Qlf">
                                                     <rect key="frame" x="279" y="17.5" width="35" height="35"/>
@@ -132,7 +135,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVk-nk-NHY" customClass="wjCircleBtn">
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVk-nk-NHY" customClass="wjCircleBtn">
                                                     <rect key="frame" x="236" y="18" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="VbH-qh-3W6"/>
@@ -140,6 +143,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="minusShopAction" destination="8Ed-kd-dhJ" eventType="touchUpInside" id="FZF-Xx-EcA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -189,6 +195,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="b6r-S4-xrI" id="FEW-ag-sLC"/>
+                        <outlet property="totalPriceLabel" destination="MLW-9C-Oap" id="0QB-VM-0Um"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

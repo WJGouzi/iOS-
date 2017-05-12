@@ -17,6 +17,10 @@
 /** wineArray */
 @property (nonatomic, strong) NSArray *wineArray;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
+
+
 @end
 
 @implementation ViewController
