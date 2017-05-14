@@ -12,7 +12,7 @@
 
 + (instancetype)modelWithDict:(NSDictionary *)dict {
     wjCountryFlagModel *model = [[self alloc] init];
-    [model setValuesForKeysWithDictionary:dict];
+    [model setValuesForKeysWithDictionary:dict]; // 如果用KVC方法进行赋值的话，必须要求 model和plist的字段名是一致的
     return model;
 }
 
