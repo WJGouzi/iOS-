@@ -67,6 +67,7 @@
     return self.dataArray.count;
 }
 
+#pragma mark - UIPickerViewDelegate
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     wjCountryFlagView *countryFlagView = [wjCountryFlagView countryFlagView];
     countryFlagView.model = self.dataArray[row];
@@ -76,6 +77,7 @@
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
     return 80;
 }
+
 
 // 把当前选中的展示到文本框中
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {

@@ -30,8 +30,8 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark - UITextFieldDelegate
 
+#pragma mark - UITextFieldDelegate
 /**
  开始编辑时调用,成为第一响应者进行调用
  */
