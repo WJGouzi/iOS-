@@ -1,5 +1,5 @@
 //
-//  wjFlagTextField.h
+//  ViewController.h
 //  3-拦截用户的输入
 //
 //  Created by gouzi on 2017/5/14.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface wjCountryFlagTextField : UITextField
-
-
-
+@interface ViewController : UIViewController
 
 
 @end
+

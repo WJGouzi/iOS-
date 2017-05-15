@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UITextField+initial.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -31,36 +32,25 @@
 
 #pragma mark - UITextFieldDelegate
 
-
-/**
- 是否允许开始编辑
- */
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return YES;
-}
-
-
 /**
  开始编辑时调用,成为第一响应者进行调用
  */
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+    // 使用分类，对方法进行重写
     // 让当前的文本框选中第一个
+    if (textField == self.wjCountryTextField) {
+        [textField initWithText];
+    } else if (textField == self.wjBirthdayTextField) {
+        [textField initWithBirthday];
+    } else {
+        [textField initWithProvinceAndCity];
+    }
     
-    NSLog(@"%s", __func__);
-}
-
-/**
- 是否允许结束编辑
- */
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    return YES;
-}
-
-
-/**
- 结束编辑的时候进行调用
- */
-- (void)textFieldDidEndEditing:(UITextField *)textField {
+    // 或者每个每个文本框都使用同一个初始化方法进行调用
+    // 就可以不用进行判断
+//    [textField initWithText];
+    
+    
     NSLog(@"%s", __func__);
 }
 

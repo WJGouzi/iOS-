@@ -11,6 +11,7 @@
 		9B6CCDF11EC94C6F00BB1B39 /* wjProvinceCityTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CCDF01EC94C6F00BB1B39 /* wjProvinceCityTextField.m */; };
 		9B6CCDF31EC94DD300BB1B39 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B6CCDF21EC94DD300BB1B39 /* provinces.plist */; };
 		9B6CCDF61EC94E7B00BB1B39 /* wjProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CCDF51EC94E7B00BB1B39 /* wjProvinceModel.m */; };
+		9B6CCDFA1EC95B2400BB1B39 /* UITextField+initial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CCDF91EC95B2400BB1B39 /* UITextField+initial.m */; };
 		9BE423AE1EC860FE0012A941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE423AD1EC860FE0012A941 /* main.m */; };
 		9BE423B11EC860FF0012A941 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE423B01EC860FE0012A941 /* AppDelegate.m */; };
 		9BE423B41EC860FF0012A941 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE423B31EC860FF0012A941 /* ViewController.m */; };
@@ -46,6 +47,8 @@
 		9B6CCDF21EC94DD300BB1B39 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
 		9B6CCDF41EC94E7B00BB1B39 /* wjProvinceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjProvinceModel.h; sourceTree = "<group>"; };
 		9B6CCDF51EC94E7B00BB1B39 /* wjProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjProvinceModel.m; sourceTree = "<group>"; };
+		9B6CCDF81EC95B2400BB1B39 /* UITextField+initial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+initial.h"; sourceTree = "<group>"; };
+		9B6CCDF91EC95B2400BB1B39 /* UITextField+initial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+initial.m"; sourceTree = "<group>"; };
 		9BE423A91EC860FE0012A941 /* 3-拦截用户的输入.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3-拦截用户的输入.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE423AD1EC860FE0012A941 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BE423AF1EC860FE0012A941 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				9BE4240E1EC88C090012A941 /* wjCountryFlagView.xib */,
 				9BE423C41EC865500012A941 /* wjCountryFlagTextField.h */,
 				9BE423C51EC865500012A941 /* wjCountryFlagTextField.m */,
+				9B6CCDF81EC95B2400BB1B39 /* UITextField+initial.h */,
+				9B6CCDF91EC95B2400BB1B39 /* UITextField+initial.m */,
 			);
 			path = FlagTextField;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			files = (
 				9B6CCDEC1EC93F1100BB1B39 /* wjBirthdayTextField.m in Sources */,
 				9BE423C61EC865500012A941 /* wjCountryFlagTextField.m in Sources */,
+				9B6CCDFA1EC95B2400BB1B39 /* UITextField+initial.m in Sources */,
 				9BE423EB1EC888F70012A941 /* wjCountryFlagModel.m in Sources */,
 				9BE423B41EC860FF0012A941 /* ViewController.m in Sources */,
 				9BE423B11EC860FF0012A941 /* AppDelegate.m in Sources */,
