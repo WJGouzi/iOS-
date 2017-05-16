@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fcX-d4-4rF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fcX-d4-4rF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
         <!--登录通讯录-->
         <scene sceneID="HmV-hk-me6">
             <objects>
-                <viewController id="qRX-zA-ciR" sceneMemberID="viewController">
+                <viewController id="qRX-zA-ciR" customClass="wjLoginVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1pb-x0-TO5"/>
                         <viewControllerLayoutGuide type="bottom" id="R86-xE-gPr"/>
@@ -48,7 +48,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O4H-ee-qO9">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="wangjun" borderStyle="roundedRect" placeholder="请输入账号名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O4H-ee-qO9">
                                         <rect key="frame" x="77" y="28" width="190" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
@@ -62,12 +62,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xmF-Yv-6u8">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xmF-Yv-6u8">
                                         <rect key="frame" x="77" y="73" width="190" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58823529409999997" green="0.82745098039999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,11 +82,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4B-rU-R78">
                                 <rect key="frame" x="281" y="281" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wjAutoLoginAction:" destination="qRX-zA-ciR" eventType="valueChanged" id="NjB-xA-zK8"/>
+                                </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVA-XQ-hVl">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVA-XQ-hVl">
                                 <rect key="frame" x="164" y="383" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="wjLoginBtnAction:" destination="qRX-zA-ciR" eventType="touchUpInside" id="aJk-bZ-DB0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="记住密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eq-PD-EBY">
                                 <rect key="frame" x="45" y="286" width="67" height="21"/>
@@ -98,15 +104,62 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92n-Ve-Bab">
                                 <rect key="frame" x="120" y="281" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wjRememberPwdAction:" destination="qRX-zA-ciR" eventType="valueChanged" id="2V1-VH-Ibg"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="登录通讯录" id="bEc-BK-HEi"/>
+                    <connections>
+                        <outlet property="wjAutoLoginSwtich" destination="T4B-rU-R78" id="Kw4-BB-15d"/>
+                        <outlet property="wjLoginBtn" destination="mVA-XQ-hVl" id="pas-df-Iw7"/>
+                        <outlet property="wjPasswordTextField" destination="xmF-Yv-6u8" id="oXT-9f-gYK"/>
+                        <outlet property="wjRememberPwdSwitch" destination="92n-Ve-Bab" id="b90-mg-mgm"/>
+                        <outlet property="wjUserIDTextField" destination="O4H-ee-qO9" id="fp8-u2-0dn"/>
+                        <segue destination="a0p-gb-n8H" kind="push" identifier="wjContactVC" id="JPd-Gf-K49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9s-ci-yMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453.60000000000002" y="109.29535232383809"/>
+        </scene>
+        <!--Wj ContactVC-->
+        <scene sceneID="LIp-V3-7fG">
+            <objects>
+                <tableViewController id="a0p-gb-n8H" customClass="wjContactVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HEH-ha-1aP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4Zy-uX-AJ9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Zy-uX-AJ9" id="nES-7B-460">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a0p-gb-n8H" id="KZj-Sg-C6x"/>
+                            <outlet property="delegate" destination="a0p-gb-n8H" id="fs7-hZ-ErE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Pqy-N2-QpP">
+                        <barButtonItem key="leftBarButtonItem" title="注销" id="n5g-Mr-4wG">
+                            <connections>
+                                <action selector="wjLoginOutAction:" destination="a0p-gb-n8H" id="KDF-TT-qHt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="7Xf-wT-Tuk"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsO-tb-XGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="109"/>
         </scene>
     </scenes>
 </document>
