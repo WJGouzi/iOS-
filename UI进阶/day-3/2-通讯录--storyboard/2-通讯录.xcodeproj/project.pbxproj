@@ -15,6 +15,9 @@
 		9B357C1C1EC9AF45000EB11E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B357C1A1EC9AF45000EB11E /* Main.storyboard */; };
 		9B357C1E1EC9AF45000EB11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B357C1D1EC9AF45000EB11E /* Assets.xcassets */; };
 		9B357C211EC9AF45000EB11E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B357C1F1EC9AF45000EB11E /* LaunchScreen.storyboard */; };
+		9BFC04EF1ECBF3A3002C63FD /* wjAddContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04EE1ECBF3A3002C63FD /* wjAddContactVC.m */; };
+		9BFC04F21ECBFA6E002C63FD /* wjContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04F11ECBFA6E002C63FD /* wjContactModel.m */; };
+		9BFC04F51ECC2498002C63FD /* wjEditContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04F41ECC2498002C63FD /* wjEditContactVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		9B357C1D1EC9AF45000EB11E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B357C201EC9AF45000EB11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B357C221EC9AF45000EB11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFC04ED1ECBF3A3002C63FD /* wjAddContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjAddContactVC.h; sourceTree = "<group>"; };
+		9BFC04EE1ECBF3A3002C63FD /* wjAddContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjAddContactVC.m; sourceTree = "<group>"; };
+		9BFC04F01ECBFA6E002C63FD /* wjContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjContactModel.h; sourceTree = "<group>"; };
+		9BFC04F11ECBFA6E002C63FD /* wjContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjContactModel.m; sourceTree = "<group>"; };
+		9BFC04F31ECC2498002C63FD /* wjEditContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjEditContactVC.h; sourceTree = "<group>"; };
+		9BFC04F41ECC2498002C63FD /* wjEditContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjEditContactVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,12 @@
 				9B0FC89C1ECAE79800E7EC53 /* wjLoginVC.m */,
 				9B0FC89E1ECAEEC200E7EC53 /* wjContactVC.h */,
 				9B0FC89F1ECAEEC200E7EC53 /* wjContactVC.m */,
+				9BFC04ED1ECBF3A3002C63FD /* wjAddContactVC.h */,
+				9BFC04EE1ECBF3A3002C63FD /* wjAddContactVC.m */,
+				9BFC04F01ECBFA6E002C63FD /* wjContactModel.h */,
+				9BFC04F11ECBFA6E002C63FD /* wjContactModel.m */,
+				9BFC04F31ECC2498002C63FD /* wjEditContactVC.h */,
+				9BFC04F41ECC2498002C63FD /* wjEditContactVC.m */,
 				9B357C1A1EC9AF45000EB11E /* Main.storyboard */,
 				9B357C1D1EC9AF45000EB11E /* Assets.xcassets */,
 				9B357C1F1EC9AF45000EB11E /* LaunchScreen.storyboard */,
@@ -160,10 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFC04F51ECC2498002C63FD /* wjEditContactVC.m in Sources */,
+				9BFC04F21ECBFA6E002C63FD /* wjContactModel.m in Sources */,
 				9B0FC89D1ECAE79800E7EC53 /* wjLoginVC.m in Sources */,
 				9B0FC8B51ECAF73700E7EC53 /* wjAlertSimpleView.m in Sources */,
 				9B357C161EC9AF45000EB11E /* AppDelegate.m in Sources */,
 				9B0FC8A01ECAEEC200E7EC53 /* wjContactVC.m in Sources */,
+				9BFC04EF1ECBF3A3002C63FD /* wjAddContactVC.m in Sources */,
 				9B357C131EC9AF45000EB11E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -74,6 +74,7 @@
     self.wjLoginBtn.enabled = self.wjPasswordTextField.text.length && self.wjUserIDTextField.text.length;
 }
 
+
 /*
 #pragma mark - UITextFieldDelegate
 // 这个方法不能使用，是因为在第二次的时候才会调用
