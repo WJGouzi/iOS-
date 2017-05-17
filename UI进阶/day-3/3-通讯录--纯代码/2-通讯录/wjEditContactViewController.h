@@ -1,5 +1,5 @@
 //
-//  wjEditContactVC.h
+//  wjEditContactViewController.h
 //  2-通讯录
 //
 //  Created by gouzi on 2017/5/17.
@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class wjContactModel;
-typedef void(^wjEditSaveBlock)(wjContactModel *model);
 
-@interface wjEditContactVC : UIViewController
+typedef void(^wjEditContactBlock)(wjContactModel *model);
+
+@interface wjEditContactViewController : UIViewController
 
 /** model */
 @property (nonatomic, strong) wjContactModel *model;
 
-
 /** block */
-@property (nonatomic, strong) wjEditSaveBlock block;
+@property (nonatomic, strong) wjEditContactBlock block;
 
 @end

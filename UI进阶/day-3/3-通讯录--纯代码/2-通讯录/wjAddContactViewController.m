@@ -1,22 +1,22 @@
 //
-//  wjAddContactVC.m
+//  wjAddContactViewController.m
 //  2-通讯录
 //
 //  Created by gouzi on 2017/5/17.
 //  Copyright © 2017年 wj. All rights reserved.
 //
 
-#import "wjAddContactVC.h"
+#import "wjAddContactViewController.h"
 #import "wjContactModel.h"
 
-@interface wjAddContactVC ()
+@interface wjAddContactViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *wjNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *wjPhoneTextField;
-
 @property (weak, nonatomic) IBOutlet UIButton *wjAddBtn;
 @end
 
-@implementation wjAddContactVC
+@implementation wjAddContactViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,17 +31,15 @@
 }
 
 
-
 - (IBAction)wjAddBtnClickAction:(UIButton *)sender {
     wjContactModel *model = [wjContactModel modelWithName:self.wjNameTextField.text phoneNumber:self.wjPhoneTextField.text];
     
     
-    if ([self.delegate respondsToSelector:@selector(addContactVC: model:)]) {
-        [self.delegate addContactVC:self model:model];
+    if ([self.delegate respondsToSelector:@selector(addContactListWithViewController: model:)]) {
+        [self.delegate addContactListWithViewController:self model:model];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 
 @end

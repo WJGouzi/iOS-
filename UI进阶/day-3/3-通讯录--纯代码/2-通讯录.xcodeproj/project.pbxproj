@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B0FC89D1ECAE79800E7EC53 /* wjLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FC89C1ECAE79800E7EC53 /* wjLoginVC.m */; };
-		9B0FC8A01ECAEEC200E7EC53 /* wjContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FC89F1ECAEEC200E7EC53 /* wjContactVC.m */; };
 		9B0FC8B51ECAF73700E7EC53 /* wjAlertSimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FC8B41ECAF73700E7EC53 /* wjAlertSimpleView.m */; };
 		9B357C131EC9AF45000EB11E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B357C121EC9AF45000EB11E /* main.m */; };
 		9B357C161EC9AF45000EB11E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B357C151EC9AF45000EB11E /* AppDelegate.m */; };
 		9B357C1C1EC9AF45000EB11E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B357C1A1EC9AF45000EB11E /* Main.storyboard */; };
 		9B357C1E1EC9AF45000EB11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B357C1D1EC9AF45000EB11E /* Assets.xcassets */; };
 		9B357C211EC9AF45000EB11E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B357C1F1EC9AF45000EB11E /* LaunchScreen.storyboard */; };
-		9BFC04EF1ECBF3A3002C63FD /* wjAddContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04EE1ECBF3A3002C63FD /* wjAddContactVC.m */; };
-		9BFC04F21ECBFA6E002C63FD /* wjContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04F11ECBFA6E002C63FD /* wjContactModel.m */; };
-		9BFC04F51ECC2498002C63FD /* wjEditContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04F41ECC2498002C63FD /* wjEditContactVC.m */; };
+		9BFC04FB1ECC34BF002C63FD /* wjLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04F91ECC34BF002C63FD /* wjLoginViewController.m */; };
+		9BFC04FC1ECC34BF002C63FD /* wjLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC04FA1ECC34BF002C63FD /* wjLoginViewController.xib */; };
+		9BFC05001ECC36A0002C63FD /* wjContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC04FE1ECC36A0002C63FD /* wjContactViewController.m */; };
+		9BFC05011ECC36A0002C63FD /* wjContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC04FF1ECC36A0002C63FD /* wjContactViewController.xib */; };
+		9BFC05081ECC39BA002C63FD /* wjAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC05061ECC39BA002C63FD /* wjAddContactViewController.m */; };
+		9BFC05091ECC39BA002C63FD /* wjAddContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC05071ECC39BA002C63FD /* wjAddContactViewController.xib */; };
+		9BFC050D1ECC3E33002C63FD /* wjEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC050B1ECC3E33002C63FD /* wjEditContactViewController.m */; };
+		9BFC050E1ECC3E33002C63FD /* wjEditContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC050C1ECC3E33002C63FD /* wjEditContactViewController.xib */; };
+		9BFC05111ECC415B002C63FD /* wjContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC05101ECC415B002C63FD /* wjContactModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B0FC89B1ECAE79800E7EC53 /* wjLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjLoginVC.h; sourceTree = "<group>"; };
-		9B0FC89C1ECAE79800E7EC53 /* wjLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjLoginVC.m; sourceTree = "<group>"; };
-		9B0FC89E1ECAEEC200E7EC53 /* wjContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjContactVC.h; sourceTree = "<group>"; };
-		9B0FC89F1ECAEEC200E7EC53 /* wjContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjContactVC.m; sourceTree = "<group>"; };
 		9B0FC8B31ECAF73700E7EC53 /* wjAlertSimpleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjAlertSimpleView.h; sourceTree = "<group>"; };
 		9B0FC8B41ECAF73700E7EC53 /* wjAlertSimpleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjAlertSimpleView.m; sourceTree = "<group>"; };
 		9B357C0E1EC9AF45000EB11E /* 2-通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2-通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,12 +35,20 @@
 		9B357C1D1EC9AF45000EB11E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B357C201EC9AF45000EB11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B357C221EC9AF45000EB11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BFC04ED1ECBF3A3002C63FD /* wjAddContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjAddContactVC.h; sourceTree = "<group>"; };
-		9BFC04EE1ECBF3A3002C63FD /* wjAddContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjAddContactVC.m; sourceTree = "<group>"; };
-		9BFC04F01ECBFA6E002C63FD /* wjContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjContactModel.h; sourceTree = "<group>"; };
-		9BFC04F11ECBFA6E002C63FD /* wjContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjContactModel.m; sourceTree = "<group>"; };
-		9BFC04F31ECC2498002C63FD /* wjEditContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjEditContactVC.h; sourceTree = "<group>"; };
-		9BFC04F41ECC2498002C63FD /* wjEditContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjEditContactVC.m; sourceTree = "<group>"; };
+		9BFC04F81ECC34BF002C63FD /* wjLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjLoginViewController.h; sourceTree = "<group>"; };
+		9BFC04F91ECC34BF002C63FD /* wjLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjLoginViewController.m; sourceTree = "<group>"; };
+		9BFC04FA1ECC34BF002C63FD /* wjLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wjLoginViewController.xib; sourceTree = "<group>"; };
+		9BFC04FD1ECC36A0002C63FD /* wjContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjContactViewController.h; sourceTree = "<group>"; };
+		9BFC04FE1ECC36A0002C63FD /* wjContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjContactViewController.m; sourceTree = "<group>"; };
+		9BFC04FF1ECC36A0002C63FD /* wjContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wjContactViewController.xib; sourceTree = "<group>"; };
+		9BFC05051ECC39BA002C63FD /* wjAddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjAddContactViewController.h; sourceTree = "<group>"; };
+		9BFC05061ECC39BA002C63FD /* wjAddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjAddContactViewController.m; sourceTree = "<group>"; };
+		9BFC05071ECC39BA002C63FD /* wjAddContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wjAddContactViewController.xib; sourceTree = "<group>"; };
+		9BFC050A1ECC3E33002C63FD /* wjEditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjEditContactViewController.h; sourceTree = "<group>"; };
+		9BFC050B1ECC3E33002C63FD /* wjEditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjEditContactViewController.m; sourceTree = "<group>"; };
+		9BFC050C1ECC3E33002C63FD /* wjEditContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wjEditContactViewController.xib; sourceTree = "<group>"; };
+		9BFC050F1ECC415B002C63FD /* wjContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjContactModel.h; sourceTree = "<group>"; };
+		9BFC05101ECC415B002C63FD /* wjContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjContactModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,16 +85,20 @@
 				9B0FC8B41ECAF73700E7EC53 /* wjAlertSimpleView.m */,
 				9B357C141EC9AF45000EB11E /* AppDelegate.h */,
 				9B357C151EC9AF45000EB11E /* AppDelegate.m */,
-				9B0FC89B1ECAE79800E7EC53 /* wjLoginVC.h */,
-				9B0FC89C1ECAE79800E7EC53 /* wjLoginVC.m */,
-				9B0FC89E1ECAEEC200E7EC53 /* wjContactVC.h */,
-				9B0FC89F1ECAEEC200E7EC53 /* wjContactVC.m */,
-				9BFC04ED1ECBF3A3002C63FD /* wjAddContactVC.h */,
-				9BFC04EE1ECBF3A3002C63FD /* wjAddContactVC.m */,
-				9BFC04F01ECBFA6E002C63FD /* wjContactModel.h */,
-				9BFC04F11ECBFA6E002C63FD /* wjContactModel.m */,
-				9BFC04F31ECC2498002C63FD /* wjEditContactVC.h */,
-				9BFC04F41ECC2498002C63FD /* wjEditContactVC.m */,
+				9BFC04F81ECC34BF002C63FD /* wjLoginViewController.h */,
+				9BFC04F91ECC34BF002C63FD /* wjLoginViewController.m */,
+				9BFC04FA1ECC34BF002C63FD /* wjLoginViewController.xib */,
+				9BFC04FD1ECC36A0002C63FD /* wjContactViewController.h */,
+				9BFC04FE1ECC36A0002C63FD /* wjContactViewController.m */,
+				9BFC04FF1ECC36A0002C63FD /* wjContactViewController.xib */,
+				9BFC050F1ECC415B002C63FD /* wjContactModel.h */,
+				9BFC05101ECC415B002C63FD /* wjContactModel.m */,
+				9BFC05051ECC39BA002C63FD /* wjAddContactViewController.h */,
+				9BFC05061ECC39BA002C63FD /* wjAddContactViewController.m */,
+				9BFC05071ECC39BA002C63FD /* wjAddContactViewController.xib */,
+				9BFC050A1ECC3E33002C63FD /* wjEditContactViewController.h */,
+				9BFC050B1ECC3E33002C63FD /* wjEditContactViewController.m */,
+				9BFC050C1ECC3E33002C63FD /* wjEditContactViewController.xib */,
 				9B357C1A1EC9AF45000EB11E /* Main.storyboard */,
 				9B357C1D1EC9AF45000EB11E /* Assets.xcassets */,
 				9B357C1F1EC9AF45000EB11E /* LaunchScreen.storyboard */,
@@ -162,7 +174,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFC05091ECC39BA002C63FD /* wjAddContactViewController.xib in Resources */,
+				9BFC05011ECC36A0002C63FD /* wjContactViewController.xib in Resources */,
+				9BFC050E1ECC3E33002C63FD /* wjEditContactViewController.xib in Resources */,
 				9B357C211EC9AF45000EB11E /* LaunchScreen.storyboard in Resources */,
+				9BFC04FC1ECC34BF002C63FD /* wjLoginViewController.xib in Resources */,
 				9B357C1E1EC9AF45000EB11E /* Assets.xcassets in Resources */,
 				9B357C1C1EC9AF45000EB11E /* Main.storyboard in Resources */,
 			);
@@ -175,13 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFC04F51ECC2498002C63FD /* wjEditContactVC.m in Sources */,
-				9BFC04F21ECBFA6E002C63FD /* wjContactModel.m in Sources */,
-				9B0FC89D1ECAE79800E7EC53 /* wjLoginVC.m in Sources */,
+				9BFC05081ECC39BA002C63FD /* wjAddContactViewController.m in Sources */,
+				9BFC05111ECC415B002C63FD /* wjContactModel.m in Sources */,
+				9BFC05001ECC36A0002C63FD /* wjContactViewController.m in Sources */,
+				9BFC04FB1ECC34BF002C63FD /* wjLoginViewController.m in Sources */,
 				9B0FC8B51ECAF73700E7EC53 /* wjAlertSimpleView.m in Sources */,
 				9B357C161EC9AF45000EB11E /* AppDelegate.m in Sources */,
-				9B0FC8A01ECAEEC200E7EC53 /* wjContactVC.m in Sources */,
-				9BFC04EF1ECBF3A3002C63FD /* wjAddContactVC.m in Sources */,
+				9BFC050D1ECC3E33002C63FD /* wjEditContactViewController.m in Sources */,
 				9B357C131EC9AF45000EB11E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
