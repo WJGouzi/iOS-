@@ -34,7 +34,7 @@
     // 拼接一个文件名
 //    NSString *fullPath = [path stringByAppendingString:@"/data.plist"];
     // 专门的方法 : stringByAppendingPathComponent 自动拼接文件的路径。
-    NSString *fullPath = [path stringByAppendingPathComponent:@"data.plist"];
+    NSString *fullPath = [path stringByAppendingPathComponent:@"data.plist"]; // plist文件只能保存基本的数据类型，并不能对自定义的对象进行保存。
     
     NSLog(@"%@", fullPath);
     [dataArray writeToFile:fullPath atomically:YES];
