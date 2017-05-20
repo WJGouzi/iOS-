@@ -80,7 +80,6 @@
 
 #pragma mark - 按钮的点击事件
 - (IBAction)deleteCellAction:(UIButton *)sender {
-
     NSMutableArray *deleteModelArray = [NSMutableArray array];
     for (NSIndexPath *index in self.selectedIndexPathArray) {
         [deleteModelArray addObject:self.wineArray[index.row]];

@@ -34,16 +34,12 @@
 
 - (void)navigationItemSettings {
     self.title = [NSString stringWithFormat:@"%@的通讯录", self.titleText];
-    
-    // 添加按钮
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [addBtn setTitle:@"添加" forState:UIControlStateNormal];
     [addBtn sizeToFit];
     [addBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addBtnClickAction:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
-    
-    
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(loginOut)];
     
@@ -107,12 +103,9 @@
     wjEditContactViewController *editVC = [[wjEditContactViewController alloc] init];
     __block typeof(self) weakSelf = self;
     editVC.block = ^(wjContactModel *model) {
-        // block回调进行设置
         [weakSelf.dataArray replaceObjectAtIndex:indexPath.row withObject:model];
-        
         [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     };
-    // 这里虽然用到的editVC控制器，但是依然不会创建。
     editVC.model = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:editVC animated:YES];
     

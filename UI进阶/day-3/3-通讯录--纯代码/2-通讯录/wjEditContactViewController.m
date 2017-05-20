@@ -49,11 +49,9 @@
 }
 
 - (IBAction)wjSaveBtnClickAction:(UIButton *)sender {
-    // 修改模型
     self.model.name = self.wjNameTextField.text;
     self.model.phoneNumber = self.wjPhoneTextField.text;
     self.block(self.model);
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
