@@ -52,7 +52,7 @@
     // 上一条线的终点作为另一条的起点
     [path addLineToPoint:CGPointMake(30, 60)];
     
-    // 设置上下问的状态
+    // 设置上下文的状态
     // 设置线宽
     CGContextSetLineWidth(ref, 10.0f);
     // 设置连接的处的状态
