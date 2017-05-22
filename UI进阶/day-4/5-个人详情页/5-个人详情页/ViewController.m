@@ -23,18 +23,23 @@
 static NSString *iden = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self wjNavigationSettings];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:iden];
+    //当调用contentInset会自动调用scrollViewDidScroll
+    self.tableView.contentInset = UIEdgeInsetsMake(244, 0, 0, 0);
+}
+
+#pragma mark - navigation settings
+- (void)wjNavigationSettings {
     // 设置导航栏的背景
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     // 取消掉底部的那根线
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:iden];
-    //当调用contentInset会自动调用scrollViewDidScroll
-    self.tableView.contentInset = UIEdgeInsetsMake(244, 0, 0, 0);
+
     //设置标题
     UILabel *title = [[UILabel alloc] init];
-    title.text = @"个人详情页";
+    title.text = @"个人主页";
     [title sizeToFit];
     // 开始的时候看不见，所以alpha值为0
     title.textColor = [UIColor colorWithWhite:0 alpha:0];
@@ -43,15 +48,16 @@ static NSString *iden = @"cell";
 }
 
 
+
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
-    cell.textLabel.text = @"ri ";
+    cell.textLabel.text = @"wj";
     return cell;
 }
 
@@ -60,6 +66,7 @@ static NSString *iden = @"cell";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"%f", scrollView.contentOffset.y);
     CGFloat offset = scrollView.contentOffset.y - oriOfftY;
+    
     CGFloat imgH = oriHeight - offset;
     if (imgH < 64) {
         imgH = 64;
@@ -72,7 +79,7 @@ static NSString *iden = @"cell";
     if (alpha >= 1) {
         alpha = 0.99;
     }
-    
+
     //拿到标题 标题文字的随着移动高度的变化而变化
     UILabel *titleL = (UILabel *)self.navigationItem.titleView;
     titleL.textColor = [UIColor colorWithWhite:0 alpha:alpha];
