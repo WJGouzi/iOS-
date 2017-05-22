@@ -65,7 +65,6 @@
     
     
     
-    
     // 3.把绘制的内容保存到上下文中
     CGContextAddPath(ref, path.CGPath);
     // 4.把上下文内容显示渲染到view的layer上去(stroke/fill)
