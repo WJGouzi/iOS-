@@ -13,8 +13,54 @@
 - (void)drawRect:(CGRect)rect {
 //    [self drawAttributeTextWithRect:rect];
     
-    [self drawAttributeImageWithRcet:rect];
+//    [self drawAttributeImageWithRcet:rect];
+
+    [self drawClockIndicatorNmuberWithRect:rect];
 }
+
+
+
+- (void)drawClockIndicatorNmuberWithRect:(CGRect)rect {
+    CGPoint center = CGPointMake(rect.size.width * 0.5, rect.size.height * 0.5);
+    CGFloat radius = rect.size.width * 0.5 - 20;
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(center.x - radius, center.y - radius, radius * 2, radius * 2)];
+    
+    [[UIColor lightGrayColor] set];
+    [path stroke];
+    
+    // 绘制文字
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    NSDictionary *attrDict = @{
+                               NSFontAttributeName : [UIFont systemFontOfSize:17.0f],
+                               // 设置文字颜色
+                               NSForegroundColorAttributeName : [UIColor redColor],
+                               NSParagraphStyleAttributeName : paragraphStyle
+                               };
+    for (int i = 1; i <= 12; ++i) {
+        path = [UIBezierPath bezierPath];
+        CGFloat angle = -M_PI_2 + i / 12.0f * M_PI * 2;
+        // 点
+        CGFloat x = center.x + (radius - 50) * cos(angle);
+        CGFloat y = center.y + (radius - 50) * sin(angle);
+        NSString *clockIndicatorStr = [NSString stringWithFormat:@"%d", i];
+        [clockIndicatorStr drawAtPoint:CGPointMake(x, y) withAttributes:attrDict];
+        
+        
+        
+        
+        
+        
+        [path moveToPoint:CGPointMake(x, y)];
+        [path addLineToPoint:center];
+        [path stroke];
+    }
+}
+
+
+
+
+
 
 - (void)drawAttributeImageWithRcet:(CGRect)rect {
     
