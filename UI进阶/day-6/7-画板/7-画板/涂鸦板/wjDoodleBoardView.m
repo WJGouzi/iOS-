@@ -9,7 +9,7 @@
 #import "wjDoodleBoardView.h"
 #import "wjBezierPath.h"
 
-@interface wjDoodleBoardView ()
+@interface wjDoodleBoardView () 
 
 @property (nonatomic, strong) UIBezierPath *path;
 
@@ -32,6 +32,14 @@
         _allPathArray = [NSMutableArray array] ;
     }
     return _allPathArray;
+}
+
+
+- (void)setImage:(UIImage *)image {
+    _image = image;
+    // 把图片也应该添加到数组中
+    [self.allPathArray addObject:image];
+    [self setNeedsDisplay];
 }
 
 
@@ -108,10 +116,16 @@ static BOOL isCliked = YES;
 - (void)drawRect:(CGRect)rect {
     // 绘制保存的所有路径
     for (wjBezierPath *path in self.allPathArray) {
-        [path.color set];
-        [path stroke];
+        // 判断取出来的path的真是类型
+        if ([path isKindOfClass:[UIImage class]]) {
+            UIImage *image = (UIImage *)path;
+            [image drawInRect:rect]; // 画在区域内
+            
+        } else {
+            [path.color set];
+            [path stroke];
+        }
     }
-    
 }
 
 

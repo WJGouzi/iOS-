@@ -15,6 +15,7 @@
 		9BDF15E21ED66D3200BDE26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BDF15E01ED66D3200BDE26A /* LaunchScreen.storyboard */; };
 		9BDF15EB1ED672D200BDE26A /* wjDoodleBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF15EA1ED672D200BDE26A /* wjDoodleBoardView.m */; };
 		9BDF15EE1ED67C8100BDE26A /* wjBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF15ED1ED67C8100BDE26A /* wjBezierPath.m */; };
+		9BDF15F11ED6B7D200BDE26A /* wjHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF15F01ED6B7D200BDE26A /* wjHandleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		9BDF15EA1ED672D200BDE26A /* wjDoodleBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjDoodleBoardView.m; path = "涂鸦板/wjDoodleBoardView.m"; sourceTree = "<group>"; };
 		9BDF15EC1ED67C8100BDE26A /* wjBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjBezierPath.h; path = "涂鸦板/wjBezierPath.h"; sourceTree = "<group>"; };
 		9BDF15ED1ED67C8100BDE26A /* wjBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjBezierPath.m; path = "涂鸦板/wjBezierPath.m"; sourceTree = "<group>"; };
+		9BDF15EF1ED6B7D200BDE26A /* wjHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjHandleView.h; path = "涂鸦板/wjHandleView.h"; sourceTree = "<group>"; };
+		9BDF15F01ED6B7D200BDE26A /* wjHandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjHandleView.m; path = "涂鸦板/wjHandleView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				9BDF15DB1ED66D3200BDE26A /* Main.storyboard */,
 				9BDF15E91ED672D200BDE26A /* wjDoodleBoardView.h */,
 				9BDF15EA1ED672D200BDE26A /* wjDoodleBoardView.m */,
+				9BDF15EF1ED6B7D200BDE26A /* wjHandleView.h */,
+				9BDF15F01ED6B7D200BDE26A /* wjHandleView.m */,
 				9BDF15EC1ED67C8100BDE26A /* wjBezierPath.h */,
 				9BDF15ED1ED67C8100BDE26A /* wjBezierPath.m */,
 				9BDF15DE1ED66D3200BDE26A /* Assets.xcassets */,
@@ -120,6 +125,7 @@
 				TargetAttributes = {
 					9BDF15CE1ED66D3200BDE26A = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 684VKU9G29;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -163,6 +169,7 @@
 				9BDF15EE1ED67C8100BDE26A /* wjBezierPath.m in Sources */,
 				9BDF15DA1ED66D3200BDE26A /* ViewController.m in Sources */,
 				9BDF15EB1ED672D200BDE26A /* wjDoodleBoardView.m in Sources */,
+				9BDF15F11ED6B7D200BDE26A /* wjHandleView.m in Sources */,
 				9BDF15D71ED66D3200BDE26A /* AppDelegate.m in Sources */,
 				9BDF15D41ED66D3200BDE26A /* main.m in Sources */,
 			);
@@ -284,8 +291,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 684VKU9G29;
 				INFOPLIST_FILE = "7-画板/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.wj.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,8 +304,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 684VKU9G29;
 				INFOPLIST_FILE = "7-画板/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.wj.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

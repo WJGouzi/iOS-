@@ -42,6 +42,11 @@
                                             <action selector="wjEraseAction:" destination="BYZ-38-t0r" id="jDY-nI-Nk6"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="相机" id="zYh-bT-eJT">
+                                        <connections>
+                                            <action selector="wjCameraGetPhotoAction:" destination="BYZ-38-t0r" id="hZF-NY-C5E"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="照片" id="JIY-NE-BOi">
                                         <connections>
                                             <action selector="wjPhotoReadAction:" destination="BYZ-38-t0r" id="s1c-e8-YiJ"/>
@@ -87,7 +92,7 @@
                                             <constraint firstAttribute="height" constant="44" id="70q-AH-a1V"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-pf-EPr">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-pf-EPr">
                                         <rect key="frame" x="18" y="16" width="339" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="A4a-Hn-iEe"/>

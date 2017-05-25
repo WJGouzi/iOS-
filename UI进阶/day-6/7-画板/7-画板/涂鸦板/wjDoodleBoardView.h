@@ -25,4 +25,8 @@
 /** 线的颜色*/
 - (void)wjSetLineColor:(UIColor *)color;
 
+/** 要绘制的图片 */
+@property (nonatomic, strong) UIImage *image;
+
+
 @end

@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "wjDoodleBoardView.h"
+#import "wjHandleView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, wjHandleViewDelegate>
 @property (weak, nonatomic) IBOutlet wjDoodleBoardView *wjDoodleBoardView;
 
 @end
@@ -60,9 +61,23 @@ static BOOL isClicked = YES;
 
 /** 读取照片*/
 - (IBAction)wjPhotoReadAction:(UIBarButtonItem *)sender {
-    
+    // 从系统相册中选择一张图片
+    // 1弹出系统相册
+    UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
+    // 设置照片的来源
+    [pickerVC setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    pickerVC.delegate = self;
+    [self presentViewController:pickerVC animated:YES completion:nil];
     
 }
+
+- (IBAction)wjCameraGetPhotoAction:(UIBarButtonItem *)sender {
+    UIImagePickerController *camerPicker = [[UIImagePickerController alloc] init];
+    [camerPicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    camerPicker.delegate = self;
+    [self presentViewController:camerPicker animated:YES completion:nil];
+}
+
 
 /** 保存*/
 - (IBAction)wjSaveToAlbumAction:(UIBarButtonItem *)sender {
@@ -82,8 +97,41 @@ static BOOL isClicked = YES;
 
 // 必须使用的方法
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    NSLog(@"保存");
+    NSLog(@"%@",contextInfo);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存成功" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
+
+
+#pragma mark - 相册\相机的代理
+/** 当选择某个照片的时候会调用某个方法 */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    NSLog(@"%@", info);
+    UIImage *img = info[@"UIImagePickerControllerOriginalImage"];
+    // 验证有没选择成功
+//    NSData *data = UIImageJPEGRepresentation(img, 1);
+//    [data writeToFile:@"/Users/wangjun/Desktop/photo.jpg" atomically:YES];
+
+    // 先展示
+    wjHandleView *handleImageView = [[wjHandleView alloc] initWithFrame:self.wjDoodleBoardView.frame];
+    handleImageView.backgroundColor = [UIColor clearColor];
+    handleImageView.image = img;
+    handleImageView.delegate = self;
+    [self.view addSubview:handleImageView];
+    
+    // 把图片传给画板
+    // 这样做会把还未进行编辑的图片直接显示到界面上
+//    self.wjDoodleBoardView.image = img;
+    // 当前的pickviewdissmiss
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - wjHandleViewDelegate
+- (void)handleImageView:(wjHandleView *)handleImageView newImage:(UIImage *)newImage {
+    self.wjDoodleBoardView.image = newImage;
+}
+
+
 
 
 @end
