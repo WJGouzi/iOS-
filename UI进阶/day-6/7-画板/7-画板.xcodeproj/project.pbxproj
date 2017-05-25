@@ -14,6 +14,7 @@
 		9BDF15DF1ED66D3200BDE26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDF15DE1ED66D3200BDE26A /* Assets.xcassets */; };
 		9BDF15E21ED66D3200BDE26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BDF15E01ED66D3200BDE26A /* LaunchScreen.storyboard */; };
 		9BDF15EB1ED672D200BDE26A /* wjDoodleBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF15EA1ED672D200BDE26A /* wjDoodleBoardView.m */; };
+		9BDF15EE1ED67C8100BDE26A /* wjBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF15ED1ED67C8100BDE26A /* wjBezierPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		9BDF15E31ED66D3200BDE26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BDF15E91ED672D200BDE26A /* wjDoodleBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjDoodleBoardView.h; path = "涂鸦板/wjDoodleBoardView.h"; sourceTree = "<group>"; };
 		9BDF15EA1ED672D200BDE26A /* wjDoodleBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjDoodleBoardView.m; path = "涂鸦板/wjDoodleBoardView.m"; sourceTree = "<group>"; };
+		9BDF15EC1ED67C8100BDE26A /* wjBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wjBezierPath.h; path = "涂鸦板/wjBezierPath.h"; sourceTree = "<group>"; };
+		9BDF15ED1ED67C8100BDE26A /* wjBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wjBezierPath.m; path = "涂鸦板/wjBezierPath.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				9BDF15DB1ED66D3200BDE26A /* Main.storyboard */,
 				9BDF15E91ED672D200BDE26A /* wjDoodleBoardView.h */,
 				9BDF15EA1ED672D200BDE26A /* wjDoodleBoardView.m */,
+				9BDF15EC1ED67C8100BDE26A /* wjBezierPath.h */,
+				9BDF15ED1ED67C8100BDE26A /* wjBezierPath.m */,
 				9BDF15DE1ED66D3200BDE26A /* Assets.xcassets */,
 				9BDF15E01ED66D3200BDE26A /* LaunchScreen.storyboard */,
 				9BDF15E31ED66D3200BDE26A /* Info.plist */,
@@ -155,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDF15EE1ED67C8100BDE26A /* wjBezierPath.m in Sources */,
 				9BDF15DA1ED66D3200BDE26A /* ViewController.m in Sources */,
 				9BDF15EB1ED672D200BDE26A /* wjDoodleBoardView.m in Sources */,
 				9BDF15D71ED66D3200BDE26A /* AppDelegate.m in Sources */,

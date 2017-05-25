@@ -27,12 +27,32 @@
                                     <constraint firstAttribute="height" constant="44" id="mLv-LL-SH1"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="清屏" id="0J7-Z2-ffP" userLabel="清屏"/>
-                                    <barButtonItem title="撤除" id="utb-hR-200"/>
-                                    <barButtonItem title="橡皮擦" id="day-5R-kxi"/>
-                                    <barButtonItem title="照片" id="JIY-NE-BOi"/>
+                                    <barButtonItem title="清屏" id="0J7-Z2-ffP" userLabel="清屏">
+                                        <connections>
+                                            <action selector="wjClearScreenAction:" destination="BYZ-38-t0r" id="mbN-DY-SsR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="撤除" id="utb-hR-200">
+                                        <connections>
+                                            <action selector="wjUndoAction:" destination="BYZ-38-t0r" id="a1A-g7-hq5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="橡皮擦" id="day-5R-kxi">
+                                        <connections>
+                                            <action selector="wjEraseAction:" destination="BYZ-38-t0r" id="jDY-nI-Nk6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="照片" id="JIY-NE-BOi">
+                                        <connections>
+                                            <action selector="wjPhotoReadAction:" destination="BYZ-38-t0r" id="s1c-e8-YiJ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gCu-iM-MyL"/>
-                                    <barButtonItem title="保存" id="Sc9-Sq-KgS"/>
+                                    <barButtonItem title="保存" id="Sc9-Sq-KgS">
+                                        <connections>
+                                            <action selector="wjSaveToAlbumAction:" destination="BYZ-38-t0r" id="bVd-UO-Sbd"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSj-5d-Hjj">
@@ -44,25 +64,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-7x-vab">
                                                 <rect key="frame" x="0.0" y="0.0" width="98.5" height="44"/>
                                                 <color key="backgroundColor" red="1" green="0.026395015559999999" blue="0.042413699870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="wjSetLineColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbL-IB-B3d"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLY-RA-tqf">
                                                 <rect key="frame" x="118.5" y="0.0" width="98" height="44"/>
                                                 <color key="backgroundColor" red="0.55975766000000005" green="1" blue="0.026587482459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="wjSetLineColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAm-Ls-asx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Is-Vt-Ox5">
                                                 <rect key="frame" x="236.5" y="0.0" width="98.5" height="44"/>
                                                 <color key="backgroundColor" red="0.18039215689999999" green="0.58039215690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="wjSetLineColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lK-nX-0dF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="70q-AH-a1V"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-pf-EPr">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-pf-EPr">
                                         <rect key="frame" x="18" y="16" width="339" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="A4a-Hn-iEe"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="wjSetLineWidthAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="INR-mR-uXm"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58823529409999997" green="0.82745098039999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,6 +127,9 @@
                             <constraint firstItem="qDl-ub-QOs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rCU-TR-vvJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wjDoodleBoardView" destination="PYk-lS-heC" id="Wod-So-bsZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

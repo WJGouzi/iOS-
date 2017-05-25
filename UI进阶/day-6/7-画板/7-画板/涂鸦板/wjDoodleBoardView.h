@@ -10,4 +10,19 @@
 
 @interface wjDoodleBoardView : UIView
 
+/** 清屏*/
+- (void)wjClearScreen;
+
+/** 撤销 */
+- (void)wjUndo;
+
+/** 擦除*/
+- (void)wjErase;
+
+/** 线宽*/
+- (void)wjSetLineWidth:(CGFloat)width;
+
+/** 线的颜色*/
+- (void)wjSetLineColor:(UIColor *)color;
+
 @end
