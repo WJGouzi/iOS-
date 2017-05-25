@@ -93,9 +93,9 @@
                                         </constraints>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-pf-EPr">
-                                        <rect key="frame" x="18" y="16" width="339" height="31"/>
+                                        <rect key="frame" x="18" y="21" width="339" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="A4a-Hn-iEe"/>
+                                            <constraint firstAttribute="height" constant="25" id="A4a-Hn-iEe"/>
                                         </constraints>
                                         <connections>
                                             <action selector="wjSetLineWidthAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="INR-mR-uXm"/>
