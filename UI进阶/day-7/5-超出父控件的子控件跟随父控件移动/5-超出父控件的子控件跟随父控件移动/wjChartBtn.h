@@ -10,4 +10,7 @@
 
 @interface wjChartBtn : UIButton
 
+/** 弹出的按钮 */
+@property (nonatomic, weak) UIButton *popBtn;
+
 @end

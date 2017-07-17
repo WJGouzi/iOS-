@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "wjChartBtn.h"
 
 @interface ViewController ()
 
@@ -19,11 +20,11 @@
     
 }
 
-- (IBAction)btnClickAction:(UIButton *)sender {
+- (IBAction)btnClickAction:(wjChartBtn *)sender {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@"对话框"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"小孩"] forState:UIControlStateHighlighted];
-    
+    sender.popBtn = btn;
     btn.frame = CGRectMake(100, -80, 100, 80);
     [sender addSubview:btn];
 }

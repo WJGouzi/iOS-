@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "5-&#x8d85;&#x51fa;&#x7236;&#x63a7;&#x4ef6;&#x7684;&#x5b50;&#x63a7;&#x4ef6;&#x8ddf;&#x968f;&#x7236;&#x63a7;&#x4ef6;&#x79fb;&#x52a8;/wjChartBtn.m"
-            timestampString = "517485257.188142"
+            timestampString = "521990288.297854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "-touchesMoved:withEvent:"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-hitTest:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
