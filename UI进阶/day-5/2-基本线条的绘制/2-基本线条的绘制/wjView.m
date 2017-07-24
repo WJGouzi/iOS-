@@ -21,6 +21,12 @@
     [self drawTestWithRect:rect];
 }
 
+- (void)wjDrawCurveLine {
+    
+}
+
+
+
 - (void)drawTestWithRect:(CGRect)rect {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGPoint center = CGPointMake(rect.size.width * 0.5, rect.size.height * 0.5);
